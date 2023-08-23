@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Swimming Slot Booking</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color:powderblue;">
+
+  <h1>Swimming Slot Booking</h1>
+
+  <form id="bookingForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br><br>
+
+    <label for="time">Time:</label>
+    <select id="time" name="time" required>
+      <option value="">Select a time slot</option>
+      <option value="08:00 - 09:00">08:00 - 09:00</option>
+      <option value="09:00 - 10:00">09:00 - 10:00</option>
+      <option value="10:00 - 11:00">10:00 - 11:00</option>
+      <option value="11:00 - 12:00">11:00 - 12:00</option>
+      <option value="12:00 - 13:00">12:00 - 13:00</option>
+      <option value="13:00 - 14:00">13:00 - 14:00</option>
+      <option value="14:00 - 15:00">14:00 - 15:00</option>
+      <option value="15:00 - 16:00">15:00 - 16:00</option>
+      <option value="16:00 - 17:00">16:00 - 17:00</option>
+      <option value="17:00 - 18:00">17:00 - 18:00</option>
+    </select><br><br>
+
+    
+<a href="checkout.html"<button>Checkout</button></a>
+  </form>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let phone = document.getElementById("phone").value;
+      let date = document.getElementById("date").value;
+      let time = document.getElementById("time").value;
+
+      // Check if all fields are filled
+      if (name == "" || email == "" || phone == "" || date == "" || time == "") {
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      // Success
+      alert("Thank you for booking! Your swimming slot is reserved on " + date + " at " + time + ".");
+      return true;
+    }
+  </script>
+<img src="swimo.jpg"width=50% height=10%>
+</body>
+</html>

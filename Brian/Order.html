@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Food Ordering</title>
+	
+<body style="background-color:powderblue;">
+	
+	<marquee><h1>Food Ordering</h1></marquee>
+	<p>Welcome to our online food ordering page. Please select the items you would like to order and proceed to checkout.</p>
+	<h2>Menu</h2>
+<form action="Checkout.html" method="post">
+	<h3>Appetizers</h3>
+	<ul>
+		<li>
+			<input type="checkbox" name="appetizers[]" value="bruschetta">
+			<label>Bruschetta - $5.99</label>
+		</li>
+		<li>
+			<input type="checkbox" name="appetizers[]" value="mozzarella sticks">
+			<label>Mozzarella Sticks - $6.99</label>
+		</li>
+		<li>
+			<input type="checkbox" name="appetizers[]" value="buffalo wings">
+			<label>Buffalo Wings - $8.99</label>
+		</li>
+		<img src="Appetizer.jpg"width=50% height=10%>
+	</ul>
+
+	<h3>Entrees</h3>
+	<ul>
+		<li>
+			<input type="checkbox" name="entrees[]" value="spaghetti and meatballs">
+			<label>Spaghetti and Meatballs - $12.99</label>
+		</li>
+		<li>
+			<input type="checkbox" name="entrees[]" value="chicken parmesan">
+			<label>Chicken Parmesan - $14.99</label>
+		</li>
+		<li>
+			<input type="checkbox" name="entrees[]" value="grilled salmon">
+			<label>Grilled Salmon - $16.99</label>
+		</li>
+		<img src="Chicken.jpg"width=50% height=10%>
+	</ul>
+
+	<h3>Desserts</h3>
+	<ul>
+		<li>
+			<input type="checkbox" name="desserts[]" value="tiramisu">
+			<label>Tiramisu - $6.99</label>
+		</li>
+		<li>
+			<input type="checkbox" name="desserts[]" value="chocolate cake">
+			<label>Chocolate Cake - $5.99</label>
+		</li>
+		<li>
+			<input type="checkbox" name="desserts[]" value="cheesecake">
+			<label>Cheesecake - $7.99</label>
+		</li>
+	</ul>
+
+	<h3>Beverages</h3>
+	<ul>
+		<li>
+			<input type="radio" name="beverage" value="soda">
+			<label>Soda - $1.99</label>
+		</li>
+		<li>
+			<input type="radio" name="beverage" value="iced tea">
+			<label>Iced Tea - $2.99</label>
+		</li>
+		<li>
+			<input type="radio" name="beverage" value="lemonade">
+			<label>Lemonade - $2.99</label>
+		</li>
+	</ul>
+
+	
+</form>
+<a href="checkout.html"<button>Checkout</button></a>
+</body>
+</html>

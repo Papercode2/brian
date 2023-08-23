@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotel Room Booking</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="background-color:powderblue;">
+
+  <h1>Hotel Room Booking Form</h1>
+
+  <form id="bookingForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" required><br><br>
+
+    <label for="room">Room Number:</label>
+    <input type="number" id="room" name="room" min="1" max="100" required><br><br>
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" min="1000" max="5000" required><br><br>
+    
+<a href="checkout.html"<button>Book now</button></a>
+  </form>
+<img src="Room.jpg"width=50% height=10%>
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let id = document.getElementById("id").value;
+      let room = document.getElementById("room").value;
+      let price = document.getElementById("price").value;
+
+      // Check if all fields are filled
+      if (name == "" || id == "" || room == "" || price == "") {
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      // Check if price is within range
+      if (price < 1000 || price > 5000) {
+        alert("Price must be between 1000 and 5000.");
+        return false;
+      }
+
+      // Success
+      alert("Thank you for booking! Your room number is " + room + " and your total price is " + price + ".");
+      return true;
+    }
+  </script>
+</body>
+</html>
